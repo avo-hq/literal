@@ -6,7 +6,7 @@ module Literal::Properties
 
 	include Literal::Types
 
-	def prop(name, type, kind = :keyword, reader: false, writer: false, predicate: false, default: nil, &coercion)
+	def prop(name, type = nil, kind = :keyword, reader: false, writer: false, predicate: false, default: nil, &coercion)
 		if default && !(Proc === default || default.frozen?)
 			raise Literal::ArgumentError.new("The default must be a frozen object or a Proc.")
 		end
