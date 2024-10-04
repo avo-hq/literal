@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 module Literal
-	TYPE_CHECKS_DISABLED = ENV["LITERAL_TYPE_CHECKS"] == "false"
+	# Force disabled on type check
+	TYPE_CHECKS_DISABLED = true
 
 	autoload :Data, "literal/data"
 	autoload :DataProperty, "literal/data_property"
